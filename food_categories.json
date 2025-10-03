@@ -1,0 +1,228 @@
+{
+  "version": "1.0",
+  "total_categories": 20,
+  "note": "This file contains ONLY model training data. Nutrition info, allergens, and cultural descriptions are fetched dynamically from LLM API at runtime.",
+  "categories": [
+    {
+      "id": 0,
+      "name_en": "Nasi Lemak",
+      "name_zh": "椰浆饭",
+      "name_ms": "Nasi Lemak",
+      "type": "main_dish",
+      "keywords": ["coconut rice", "lemak", "nasi", "sambal", "anchovies"],
+      "visual_features": ["white_rice", "red_sambal", "brown_anchovies", "peanuts", "egg"]
+    },
+    {
+      "id": 1,
+      "name_en": "Bak Kut Teh",
+      "name_zh": "肉骨茶",
+      "name_ms": "Bak Kut Teh",
+      "type": "soup",
+      "keywords": ["pork", "herbal soup", "bak kut", "ribs"],
+      "visual_features": ["dark_brown_broth", "pork_ribs", "herbs"]
+    },
+    {
+      "id": 2,
+      "name_en": "Rojak",
+      "name_zh": "罗惹",
+      "name_ms": "Rojak",
+      "type": "salad",
+      "keywords": ["fruit salad", "rojak", "shrimp paste", "mixed"],
+      "visual_features": ["mixed_colors", "black_sauce", "crushed_peanuts", "fruits"]
+    },
+    {
+      "id": 3,
+      "name_en": "Nasi Kerabu",
+      "name_zh": "蓝花饭",
+      "name_ms": "Nasi Kerabu",
+      "type": "main_dish",
+      "keywords": ["blue rice", "kerabu", "butterfly pea", "herbs"],
+      "visual_features": ["blue_rice", "green_vegetables", "fish", "herbs"]
+    },
+    {
+      "id": 4,
+      "name_en": "Char Kway Teow",
+      "name_zh": "炒粿条",
+      "name_ms": "Char Kuey Teow",
+      "type": "noodle",
+      "keywords": ["fried noodles", "flat noodles", "char kway teow", "wok"],
+      "visual_features": ["dark_brown", "flat_noodles", "bean_sprouts", "prawns"]
+    },
+    {
+      "id": 5,
+      "name_en": "Hokkien Mee",
+      "name_zh": "福建面",
+      "name_ms": "Hokkien Mee",
+      "type": "noodle",
+      "keywords": ["dark noodles", "prawn noodles", "hokkien", "squid"],
+      "visual_features": ["dark_sauce", "yellow_noodles", "prawns", "squid"]
+    },
+    {
+      "id": 6,
+      "name_en": "Cendol",
+      "name_zh": "煎蕊",
+      "name_ms": "Cendol",
+      "type": "dessert",
+      "keywords": ["green jelly", "coconut milk", "cendol", "ice"],
+      "visual_features": ["green_jelly", "white_coconut_milk", "brown_sugar", "ice"]
+    },
+    {
+      "id": 7,
+      "name_en": "Roti Canai",
+      "name_zh": "印度煎饼",
+      "name_ms": "Roti Canai",
+      "type": "main_dish",
+      "keywords": ["flatbread", "roti", "indian bread", "curry"],
+      "visual_features": ["golden_brown", "crispy_layers", "flaky", "round"]
+    },
+    {
+      "id": 8,
+      "name_en": "Chicken Rice",
+      "name_zh": "海南鸡饭",
+      "name_ms": "Nasi Ayam",
+      "type": "main_dish",
+      "keywords": ["hainanese chicken", "steamed chicken", "chicken rice"],
+      "visual_features": ["white_chicken", "yellow_rice", "cucumber", "sauce"]
+    },
+    {
+      "id": 9,
+      "name_en": "Ramly Burger",
+      "name_zh": "Ramly汉堡",
+      "name_ms": "Burger Ramly",
+      "type": "fast_food",
+      "keywords": ["burger", "ramly", "street food", "egg wrapped"],
+      "visual_features": ["wrapped_in_egg", "burger_patty", "sauce", "bun"]
+    },
+    {
+      "id": 10,
+      "name_en": "Curry Laksa",
+      "name_zh": "咖喱叻沙",
+      "name_ms": "Laksa Kari",
+      "type": "noodle_soup",
+      "keywords": ["curry soup", "laksa", "coconut curry", "spicy"],
+      "visual_features": ["orange_red_broth", "thick_noodles", "tofu_puffs", "prawns"]
+    },
+    {
+      "id": 11,
+      "name_en": "Satay",
+      "name_zh": "沙爹",
+      "name_ms": "Satay",
+      "type": "snack",
+      "keywords": ["grilled meat", "skewers", "satay", "peanut sauce"],
+      "visual_features": ["grilled_meat", "peanut_sauce", "skewers", "cucumber"]
+    },
+    {
+      "id": 12,
+      "name_en": "Wantan Mee",
+      "name_zh": "云吞面",
+      "name_ms": "Wantan Mee",
+      "type": "noodle",
+      "keywords": ["wonton noodles", "char siu", "wantan", "dumpling"],
+      "visual_features": ["dark_noodles", "red_char_siu", "green_vegetables", "wontons"]
+    },
+    {
+      "id": 13,
+      "name_en": "Nasi Kandar",
+      "name_zh": "嘛嘛档饭",
+      "name_ms": "Nasi Kandar",
+      "type": "main_dish",
+      "keywords": ["mixed rice", "indian curry", "nasi kandar", "mamak"],
+      "visual_features": ["white_rice", "mixed_curry_gravy", "multiple_dishes", "colorful"]
+    },
+    {
+      "id": 14,
+      "name_en": "Kolo Mee",
+      "name_zh": "干捞面",
+      "name_ms": "Kolo Mee",
+      "type": "noodle",
+      "keywords": ["dry noodles", "sarawak noodles", "kolo", "minced meat"],
+      "visual_features": ["flat_noodles", "minced_meat", "char_siu", "simple"]
+    },
+    {
+      "id": 15,
+      "name_en": "Chili Pan Mee",
+      "name_zh": "辣椒板面",
+      "name_ms": "Pan Mee Cili",
+      "type": "noodle",
+      "keywords": ["flat noodles", "chili paste", "pan mee", "handmade"],
+      "visual_features": ["flat_noodles", "red_chili", "anchovies", "egg"]
+    },
+    {
+      "id": 16,
+      "name_en": "Chee Cheong Fun",
+      "name_zh": "猪肠粉",
+      "name_ms": "Chee Cheong Fun",
+      "type": "dim_sum",
+      "keywords": ["rice rolls", "steamed rolls", "chee cheong fun"],
+      "visual_features": ["white_rolls", "dark_sauce", "sesame", "smooth"]
+    },
+    {
+      "id": 17,
+      "name_en": "Claypot Chicken Rice",
+      "name_zh": "砂煲鸡饭",
+      "name_ms": "Nasi Ayam Periuk Tanah",
+      "type": "main_dish",
+      "keywords": ["claypot", "chicken rice", "sausage", "crispy rice"],
+      "visual_features": ["dark_sauce", "claypot", "crispy_rice", "sausage"]
+    },
+    {
+      "id": 18,
+      "name_en": "Apam Balik",
+      "name_zh": "曼煎糕",
+      "name_ms": "Apam Balik",
+      "type": "dessert",
+      "keywords": ["pancake", "peanut pancake", "apam", "sweet"],
+      "visual_features": ["golden_brown", "peanuts", "folded_pancake", "thick"]
+    },
+    {
+      "id": 19,
+      "name_en": "Lemang",
+      "name_zh": "竹筒糯米饭",
+      "name_ms": "Lemang",
+      "type": "main_dish",
+      "keywords": ["glutinous rice", "bamboo", "lemang", "coconut"],
+      "visual_features": ["cylindrical", "white_rice", "wrapped", "bamboo"]
+    }
+  ],
+  "category_groups": {
+    "main_dish": [0, 3, 7, 8, 13, 17, 19],
+    "noodle": [4, 5, 12, 14, 15],
+    "noodle_soup": [10],
+    "soup": [1],
+    "dessert": [6, 18],
+    "snack": [2, 11],
+    "fast_food": [9],
+    "dim_sum": [16]
+  },
+  "confusion_pairs": [
+    {
+      "pair": [5, 4],
+      "foods": ["Hokkien Mee", "Char Kway Teow"],
+      "reason": "Both are dark fried noodles",
+      "distinction": "Hokkien Mee has darker sauce and yellow noodles, CKT is flatter and lighter"
+    },
+    {
+      "pair": [14, 12],
+      "foods": ["Kolo Mee", "Wantan Mee"],
+      "reason": "Both are dry noodles with char siu",
+      "distinction": "Kolo Mee has flatter noodles and lighter color, simpler toppings"
+    },
+    {
+      "pair": [15, 16],
+      "foods": ["Chili Pan Mee", "Chee Cheong Fun"],
+      "reason": "Both can appear flat and white",
+      "distinction": "Pan Mee is thicker handmade noodles, CCF is rolled rice sheets"
+    }
+  ],
+  "dataset_split": {
+    "train": 0.7,
+    "validation": 0.2,
+    "test": 0.1
+  },
+  "training_config": {
+    "target_images_per_class": 50,
+    "minimum_images_per_class": 40,
+    "image_size": 640,
+    "augmentation": true
+  }
+}
