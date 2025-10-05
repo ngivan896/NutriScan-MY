@@ -21,10 +21,17 @@
 ## 📊 项目状态
 
 - ✅ Week 1: 环境配置完成
-- 🔶 Week 2: 数据收集进行中（目标：1000+ 张图像）
-- ⏳ Week 3-4: 模型训练
-- ⏳ Week 5-6: App 开发
+- ✅ Week 2: 数据收集完成 + Backend Dashboard开发
+- 🔶 Week 3-4: 模型训练 + Google Colab智能集成
+- ⏳ Week 5-6: 移动端App开发
 - ⏳ Week 7-8: 优化和交付
+
+### 🆕 新增功能
+- 🎛️ **Backend Dashboard** - 统一管理后台系统
+- 🌐 **Web UI界面** - 现代化深色主题设计
+- 🤖 **Google Colab智能集成** - 云端训练环境
+- 📊 **实时数据监控** - 训练进度和系统状态
+- 🔧 **API管理** - 完整的后端API系统
 
 ## 🍜 识别的食物（20种）
 
@@ -54,11 +61,15 @@
 ```
 NutriScan MY/
 ├── Project.md                    # 主项目文档
+├── BACKEND_DASHBOARD_ROADMAP.md  # Backend Dashboard规划文档
 ├── food_list.md                  # 20种食物详细信息
 ├── food_categories.json          # 食物配置文件
 ├── WEEK2_DATA_COLLECTION_GUIDE.md  # Week 2数据收集指南
 ├── check_images.js              # 数据收集进度检查工具
 ├── create_food_folders.js       # 自动创建食物分类文件夹
+├── setup_real_data.py           # 环境配置脚本
+├── start_webui.bat              # Web UI启动脚本
+├── start_jupyter.bat            # Jupyter启动脚本
 ├── scripts/                     # 辅助脚本
 │   ├── download_images.js       # 在线图像下载工具
 │   └── README.md
@@ -67,18 +78,78 @@ NutriScan MY/
 │   ├── roti_canai/
 │   └── ... (20种食物)
 ├── test_images/                 # 测试图像
-└── training/                    # 训练相关（Week 3-4准备）
-    ├── notebooks/
-    │   ├── yolov8_train.ipynb   # YOLOv8训练notebook
-    │   └── requirements.txt
-    ├── models/                  # 训练好的模型
-    ├── results/                 # 训练结果
-    └── README.md
+├── datasets/                    # 数据集管理
+│   ├── raw_images/
+│   ├── roboflow_export/
+│   └── uploaded/
+├── training/                    # 训练相关
+│   ├── notebooks/
+│   │   ├── yolov8_train.ipynb   # YOLOv8训练notebook
+│   │   ├── quick_test_train.ipynb # 快速测试训练
+│   │   ├── train_from_roboflow.py # Roboflow训练脚本
+│   │   ├── train_local_data.py  # 本地数据训练脚本
+│   │   └── requirements.txt
+│   ├── models/                  # 训练好的模型
+│   ├── results/                 # 训练结果
+│   └── README.md
+├── web_ui/                      # Backend Dashboard Web UI
+│   ├── server.js                # Node.js后端服务器
+│   ├── package.json             # 后端依赖
+│   ├── config.example.env       # 环境配置示例
+│   └── client/                  # React前端
+│       ├── src/
+│       │   ├── App.js           # 主应用组件
+│       │   ├── components/      # 通用组件
+│       │   └── pages/           # 页面组件
+│       │       ├── Dashboard.js # 仪表盘
+│       │       ├── Training.js  # 训练管理
+│       │       ├── Models.js    # 模型管理
+│       │       ├── Datasets.js  # 数据集管理
+│       │       ├── API.js       # API管理
+│       │       └── Settings.js  # 系统设置
+│       └── package.json         # 前端依赖
+└── results/                     # 训练结果和模型文件
 ```
 
-## 🛠️ 使用工具
+## 🛠️ 快速开始
 
-### Week 2: 数据收集工具
+### 🎛️ Backend Dashboard (推荐)
+
+**启动Web UI管理系统**
+```bash
+# 1. 启动后端服务器
+cd web_ui
+npm install
+node server.js
+
+# 2. 启动前端界面
+cd client
+npm install
+npm start
+```
+
+**访问地址**: http://localhost:3000
+
+**功能包括**:
+- 📊 实时仪表盘 - 系统状态和训练进度
+- 🤖 模型训练管理 - 启动/停止训练任务
+- 📁 数据集管理 - 本地和Roboflow数据同步
+- 🔧 API配置管理 - Gemini和Roboflow API设置
+- 📈 性能监控 - 训练结果和模型性能
+
+### 🚀 快速启动脚本
+
+**一键启动Web UI**
+```bash
+start_webui.bat
+```
+
+**一键启动Jupyter训练环境**
+```bash
+start_jupyter.bat
+```
+
+### 📊 数据收集工具
 
 **检查数据收集进度**
 ```bash
@@ -95,19 +166,27 @@ node scripts/download_images.js
 node create_food_folders.js
 ```
 
-### Week 3-4: 模型训练准备
+### 🤖 模型训练
 
-**训练环境已准备**:
+**Google Colab智能集成** (推荐)
+- 🎯 通过Web UI一键启动Colab训练
+- ☁️ 云端GPU训练，无需本地配置
+- 🔄 训练结果自动同步回Dashboard
+
+**本地训练环境**
 - 📓 `training/notebooks/yolov8_train.ipynb` - 完整训练流程
 - 📋 `training/README.md` - 训练指南和技巧
 - 📦 `training/notebooks/requirements.txt` - 依赖包列表
 
-**🔥 用3张照片测试训练** (推荐先做):
-- 📓 `training/notebooks/quick_test_train.ipynb` - 快速测试训练
-- 📋 `training/TEST_TRAINING.md` - 测试指南
-- ⏱️ 5-10分钟验证环境和流程
+**🔥 快速测试训练**
+```bash
+python training/notebooks/train_local_data.py
+```
 
-**数据收集完成后即可开始训练！**
+**Roboflow数据集训练**
+```bash
+python training/notebooks/train_from_roboflow.py
+```
 
 ## 🔧 技术栈
 
@@ -116,6 +195,12 @@ node create_food_folders.js
 - TensorFlow Lite
 - Gemini Vision API
 - Roboflow (数据管理)
+
+**Backend Dashboard**:
+- Node.js + Express
+- React + Ant Design
+- Socket.IO (实时通信)
+- Chart.js (数据可视化)
 
 **移动端**:
 - React Native + Expo
@@ -127,14 +212,19 @@ node create_food_folders.js
 - Firebase
 - Google Cloud
 
-**训练**:
-- Google Colab (Free Tier)
-- Google Drive (200GB)
+**训练环境**:
+- Google Colab (智能集成)
+- 本地Python环境
+- Jupyter Notebook
 
 ## 📖 文档
 
 - `Project.md` - 完整项目文档和架构
+- `BACKEND_DASHBOARD_ROADMAP.md` - Backend Dashboard规划文档
 - `food_list.md` - 20种食物的拍摄和识别指南
+- `WEEK2_DATA_COLLECTION_GUIDE.md` - 数据收集指南
+- `training/README.md` - 模型训练指南
+- `web_ui/README.md` - Web UI使用指南
 
 ## 🎓 学术贡献
 
@@ -145,11 +235,17 @@ node create_food_folders.js
 ## 📅 时间线
 
 - **Week 1** (2025-10-03): ✅ 环境配置完成
-- **Week 2** (进行中): 数据收集（1000+ 张图像）
-- **Week 3-4**: YOLOv8 模型训练
+- **Week 2** (2025-10-10): ✅ 数据收集完成 + Backend Dashboard开发
+- **Week 3-4** (进行中): YOLOv8 模型训练 + Google Colab智能集成
 - **Week 5-6**: React Native App 开发
 - **Week 7**: 优化和测试
 - **Week 8**: 最终交付
+
+### 🎯 当前重点
+- 🤖 完善Google Colab智能集成
+- 📊 优化Backend Dashboard功能
+- 🔧 实现移动端配置管理
+- 🌐 多语言国际化支持
 
 ## 🔗 相关链接
 
