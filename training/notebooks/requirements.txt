@@ -1,0 +1,32 @@
+# YOLOv8 Training Requirements
+# For Week 3-4: Model Training
+
+# Core ML Framework
+ultralytics>=8.0.0          # YOLOv8 by Ultralytics
+torch>=2.0.0                # PyTorch (for GPU support)
+torchvision>=0.15.0         # Vision utilities
+
+# Dataset Management
+roboflow>=1.1.0             # Roboflow API client
+
+# Image Processing
+opencv-python>=4.8.0        # Computer vision
+Pillow>=10.0.0              # Image handling
+
+# Data Science
+numpy>=1.24.0               # Numerical computing
+pandas>=2.0.0               # Data analysis
+matplotlib>=3.7.0           # Plotting
+seaborn>=0.12.0             # Statistical visualization
+
+# Utilities
+pyyaml>=6.0                 # YAML config files
+tqdm>=4.65.0                # Progress bars
+
+# Jupyter (Optional)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# TensorFlow (for TFLite export)
+tensorflow>=2.13.0          # TFLite conversion
+

@@ -1,0 +1,7 @@
+names:
+- nasi_lemak
+nc: 1
+path: C:\Users\ngiva\Desktop\NutriScan MY\training\notebooks\local_dataset
+test: test/images
+train: train/images
+val: valid/images

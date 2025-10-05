@@ -56,26 +56,58 @@ NutriScan MY/
 ├── Project.md                    # 主项目文档
 ├── food_list.md                  # 20种食物详细信息
 ├── food_categories.json          # 食物配置文件
+├── WEEK2_DATA_COLLECTION_GUIDE.md  # Week 2数据收集指南
 ├── check_images.js              # 数据收集进度检查工具
 ├── create_food_folders.js       # 自动创建食物分类文件夹
+├── scripts/                     # 辅助脚本
+│   ├── download_images.js       # 在线图像下载工具
+│   └── README.md
 ├── raw_images/                  # 原始图像数据（本地）
 │   ├── nasi_lemak/
 │   ├── roti_canai/
 │   └── ... (20种食物)
-└── test_images/                 # 测试图像
+├── test_images/                 # 测试图像
+└── training/                    # 训练相关（Week 3-4准备）
+    ├── notebooks/
+    │   ├── yolov8_train.ipynb   # YOLOv8训练notebook
+    │   └── requirements.txt
+    ├── models/                  # 训练好的模型
+    ├── results/                 # 训练结果
+    └── README.md
 ```
 
 ## 🛠️ 使用工具
 
-### 检查数据收集进度
+### Week 2: 数据收集工具
+
+**检查数据收集进度**
 ```bash
 node check_images.js
 ```
 
-### 创建食物分类文件夹
+**下载在线图像** (需要Pexels API Key)
+```bash
+node scripts/download_images.js
+```
+
+**创建食物分类文件夹**
 ```bash
 node create_food_folders.js
 ```
+
+### Week 3-4: 模型训练准备
+
+**训练环境已准备**:
+- 📓 `training/notebooks/yolov8_train.ipynb` - 完整训练流程
+- 📋 `training/README.md` - 训练指南和技巧
+- 📦 `training/notebooks/requirements.txt` - 依赖包列表
+
+**🔥 用3张照片测试训练** (推荐先做):
+- 📓 `training/notebooks/quick_test_train.ipynb` - 快速测试训练
+- 📋 `training/TEST_TRAINING.md` - 测试指南
+- ⏱️ 5-10分钟验证环境和流程
+
+**数据收集完成后即可开始训练！**
 
 ## 🔧 技术栈
 
